@@ -4,7 +4,8 @@ var monVue = new Vue({
         database,
         titres :{
             Nom : "nom",
-            Entreprise : "entreprise"
+            Entreprise : "entreprise",
+            Age: "age"
         }
-    }    
+    }
 })
