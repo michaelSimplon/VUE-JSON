@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Database</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="database.json"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    </head>
+    <body>
+
+    	<div id="content">
+            <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col" v-for="titre in titres">{{titre.toUpperCase()}}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="adherent in database">
+                        <td>{{adherent.name}}</td>
+                        <td>{{adherent.company}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
