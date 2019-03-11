@@ -1,3 +1,5 @@
+Vue.component({})
+
 var monVue = new Vue({
     el:"#content",
     data: {
