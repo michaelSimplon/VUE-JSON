@@ -21,7 +21,8 @@
         <div class="container">
 
             <div id="content">
-                <list-adherents v-bind:data="database" v-bind:titres="titres"></list-adherents>
+                <input type="text" v-model="search" placeholder="Chercher un nom">
+                <list-adherents v-bind:data="filtreNom" v-bind:titres="titres"></list-adherents>
             </div>
 
         </div>

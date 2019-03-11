@@ -26,6 +26,16 @@ var monVue = new Vue({
             Nom : "nom",
             Entreprise : "entreprise",
             Age: "age"
+        },
+        search:""
+    },
+    computed:{
+        filtreNom() {
+          return this.database.filter(adherent => {
+            return adherent.name.toLowerCase().includes(this.search.toLowerCase())
+          })
         }
     }
+
+
 })
